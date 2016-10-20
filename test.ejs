@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/radar.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <style>
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+    }
+    </style>
+  </head>
+	<body>
+    <div id="chartdiv"></div>
+    <script>
+    var chart = AmCharts.makeChart( "chartdiv", {
+        "type": "radar",
+        "theme": "light",
+        "dataProvider": [ {
+          "facet": "Openness to experience",
+          "score": 59
+        }, {
+          "facet": "Conscientiousness",
+          "score": 88
+        }, {
+          "facet": "Extraversion",
+          "score": 77
+        }, {
+          "facet": "Agreeableness",
+          "score": 64
+        }, {
+          "facet": "Neuroticism",
+          "score": 43
+        }],
+        "valueAxes": [ {
+          "axisTitleOffset": 20,
+          "minimum": 0,
+          "axisAlpha": 0.15
+        } ],
+        "startDuration": 2,
+        "graphs": [ {
+          "balloonText": "[[value]]",
+          "bullet": "round",
+          "lineThickness": 2,
+          "valueField": "score"
+        } ],
+        "categoryField": "facet",
+        "export": {
+          "enabled": true
+        }
+      } );
+    </script>
+	</body>
+</html>
