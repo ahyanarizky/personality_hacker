@@ -1,0 +1,6 @@
+{
+    "development": {
+        "storage": "db/personal_hacker.db",
+        "dialect": "sqlite"
+    }
+}
