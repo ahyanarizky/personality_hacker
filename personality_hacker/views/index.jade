@@ -39,6 +39,7 @@ block content
             th Full Name
             th Birthday
             th About
+            th Detail
             th Update
             th Delete
         tbody
@@ -47,6 +48,8 @@ block content
               td= key.name
               td= key.birthday
               td= key.about
+              td
+                a.btn.btn-primary(href='/detail/'+key.id , role='button') Detail
               td
                 a.btn.btn-warning(href='/update/'+key.id , role='button') Update
               td
